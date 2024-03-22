@@ -1,0 +1,20 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule ^admin/login$ modules/admin/login.php [NC,L]
+
+RewriteRule ^users/login$ modules/users/login.php [NC,L]
+RewriteRule ^users/register$ modules/users/register.php [NC,L]
+RewriteRule ^users/list$ modules/users/list.php [NC,L]
+
+RewriteRule ^items/detail$ modules/items/detail.php [NC,L]
+RewriteRule ^items/detail/([0-9_-]*)$ modules/items/detail.php?id=$1 [NC,L]
+RewriteRule ^items/create$ modules/items/create.php [NC,L]
+RewriteRule ^items/update$ modules/items/update.php [NC,L]
+RewriteRule ^items/delete$ modules/items/delete.php [NC,L]
+RewriteRule ^items/list$ modules/items/list.php [NC,L]
+
+RewriteRule ^items/delete$ modules/items/delete.php [NC,L]
+RewriteRule ^items/list$ modules/items/list.php [NC,L]
+
+RewriteRule ^orders/create$ modules/orders/create.php [NC,L]
+RewriteRule ^orders/update$ modules/orders/update.php [NC,L]
+RewriteRule ^orders/list$ modules/orders/list.php [NC,L]
