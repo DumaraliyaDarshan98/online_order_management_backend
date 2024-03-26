@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
             $order->item_id = $order_item_row['item_id'];
             $item_result = $order->item_detail();
             $order_item_row['item_detail'] = $item_result->fetch_assoc();
-			$order_item_row['item_detail']['image'] =  BASE_URL . 'uploads/' . $order_item_row['item_detail']['image'];
+			            $order_item_row['item_detail']['image'] =  BASE_URL . 'uploads/' . $order_item_row['item_detail']['image'];
             $order_detail['items'][] = $order_item_row;
         }
 
