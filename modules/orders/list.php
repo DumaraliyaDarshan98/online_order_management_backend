@@ -32,10 +32,10 @@ if ($result->num_rows > 0) {
         $order->id = $row['id'];
         $order_item_result = $order->order_item_list();
         while ($order_item_row = $order_item_result->fetch_assoc()) {
-
             $order->item_id = $order_item_row['item_id'];
             $item_result = $order->item_detail();
             $order_item_row['item_detail'] = $item_result->fetch_assoc();
+			// $order_item_row['item_detail']['image'] = $order_item_row['item_detail']['image'];
             $order_detail['items'][] = $order_item_row;
         }
 
